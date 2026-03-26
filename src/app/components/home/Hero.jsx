@@ -86,7 +86,7 @@ const Hero = () => {
                             >
                                 <Link
                                     href="/courses"
-                                    className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
+                                    className="group relative px-8 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-xl font-semibold overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-2"
                                 >
                                     <span className="relative z-10">Start Learning Today</span>
                                     <FaArrowRight className="relative z-10 group-hover:translate-x-1 transition-transform" />
@@ -224,8 +224,8 @@ const Hero = () => {
                             <div className={`w-12 h-12 mx-auto mb-3 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                                 <stat.icon className="text-white text-xl" />
                             </div>
-                            <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                            <p className="text-sm text-gray-500">{stat.label}</p>
+                            <p className="text-2xl font-bold text-white">{stat.value}</p>
+                            <p className="text-sm text-gray-400">{stat.label}</p>
                         </div>
                     ))}
                 </motion.div>

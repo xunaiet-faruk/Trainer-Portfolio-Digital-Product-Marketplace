@@ -43,10 +43,8 @@ const CategorySection = () => {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <span className="inline-block px-4 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-full text-sm font-semibold mb-4">
-                        Web Development Categories
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-400 dark:text-white mb-4">
+                    {/* heading text */}
+                    <h2 className="text-4xl md:text-5xl font-bold  text-gray-400  mb-4">
                         What Do You Want to{' '}
                         <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                             Master Today?
@@ -68,16 +66,16 @@ const CategorySection = () => {
                             whileHover={{ y: -8 }}
                             className="group cursor-pointer"
                         >
-                            <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900  rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700">
+                            <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900  rounded-2xl p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 ">
                                 <div className={`w-20 h-20 mx-auto mb-4 ${category.bgColor} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                                     <category.icon className={`text-5xl ${category.iconColor}`} />
                                 </div>
                                 <h3 className="text-xl font-semibold text-white mb-2">{category.title}</h3>
                                 <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{category.description}</p>
                                 <div className="flex justify-center gap-4 text-sm">
-                                    <span className="text-indigo-600 dark:text-indigo-400 font-semibold">{category.resources} resources</span>
-                                    <span className="text-gray-300 dark:text-gray-600">•</span>
-                                    <span className="text-gray-600 dark:text-gray-400">{category.students} students</span>
+                                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent font-semibold">{category.resources} resources</span>
+                                    <span className="text-gray-300 ">•</span>
+                                    <span className="text-gray-400 ">{category.students} students</span>
                                 </div>
                             </div>
                         </motion.div>

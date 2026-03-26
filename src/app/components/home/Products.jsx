@@ -56,7 +56,7 @@ const Products = () => {
     const [hoveredProduct, setHoveredProduct] = useState(null);
 
     return (
-        <div className="bg-white py-20">
+        <div className=" py-20">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -65,16 +65,14 @@ const Products = () => {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <span className="inline-block px-4 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm font-semibold mb-4">
-                        Digital Resources
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-400 mb-4">
                         Premium{' '}
-                        <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                             Web Development Templates
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                         Ready-to-use code and templates to accelerate your development
                     </p>
                 </motion.div>
@@ -90,7 +88,7 @@ const Products = () => {
                             whileHover={{ y: -8 }}
                             onMouseEnter={() => setHoveredProduct(product.id)}
                             onMouseLeave={() => setHoveredProduct(null)}
-                            className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group"
+                            className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group"
                         >
                             <div className="relative h-48 overflow-hidden">
                                 <img
@@ -114,13 +112,13 @@ const Products = () => {
                                     </div>
                                     <span className="text-xs text-gray-500">({product.rating})</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors">
+                                <h3 className="text-lg mb-2">
                                     {product.title}
                                 </h3>
-                                <p className="text-sm text-gray-600 mb-3 line-clamp-2">{product.description}</p>
+                                <p className="text-sm mb-2 text-gray-400 mb-3 line-clamp-2">{product.description}</p>
                                 <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                                     <div>
-                                        <span className="text-2xl font-bold text-indigo-600">${product.price}</span>
+                                        <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">${product.price}</span>
                                     </div>
                                     <div className="flex items-center gap-1 text-sm text-gray-500">
                                         <FaDownload className="text-xs" />
@@ -132,7 +130,7 @@ const Products = () => {
                     ))}
                 </div>
 
-                <div className="text-center mt-12">
+                <div className="text-center mt-20">
                     <Link
                         href="/templates"
                         className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"

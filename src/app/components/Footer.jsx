@@ -70,7 +70,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300">
+        <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 mt-20 text-gray-300">
             {/* Animated Background Pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0" style={{

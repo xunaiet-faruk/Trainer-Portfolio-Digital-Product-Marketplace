@@ -69,12 +69,10 @@ const CoursesSection = () => {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <span className="inline-block px-4 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm font-semibold mb-4">
-                        Top Rated Courses
-                    </span>
+                    
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-400 mb-4">
-                        Popular {' '}
-                        <span className="text-indigo-600">
+                        Popular {'  '}
+                        <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                             Web Development Courses
                         </span>
                     </h2>
@@ -131,7 +129,7 @@ const CoursesSection = () => {
                                 </div>
                                 <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                                     <div>
-                                        <span className="text-2xl font-bold text-indigo-600">${course.price}</span>
+                                        <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">${course.price}</span>
                                         <span className="text-sm text-gray-400 line-through ml-2">${course.originalPrice}</span>
                                     </div>
                                     <button className="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center hover:bg-indigo-600 group/btn transition-all duration-300">
@@ -146,7 +144,7 @@ const CoursesSection = () => {
                 <div className="text-center mt-20">
                     <Link
                         href="/courses"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105"
                     >
                         View All Courses
                         <FaArrowRight />

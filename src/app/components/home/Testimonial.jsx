@@ -38,7 +38,7 @@ const testimonials = [
 
 const Testimonial = () => {
     return (
-        <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 py-20">
+        <div className=" py-20">
             <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -47,16 +47,14 @@ const Testimonial = () => {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <span className="inline-block px-4 py-1 bg-white/20 text-white rounded-full text-sm font-semibold mb-4">
-                        Developer Success Stories
-                    </span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                   
+                    <h2 className="text-4xl md:text-5xl font-bold text-gray-400 mb-4">
                         What Our{' '}
-                        <span className="text-yellow-300">
+                        <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                             Students Say
                         </span>
                     </h2>
-                    <p className="text-xl text-indigo-100 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                         Join 10,000+ developers who launched their careers with us
                     </p>
                 </motion.div>
@@ -70,7 +68,7 @@ const Testimonial = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
                             whileHover={{ y: -8 }}
-                            className="bg-white rounded-2xl p-6 shadow-xl relative"
+                            className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl p-6 shadow-xl relative"
                         >
                             <FaQuoteLeft className="absolute top-6 right-6 text-4xl text-indigo-100" />
                             <div className="flex items-center gap-4 mb-4">
@@ -82,8 +80,8 @@ const Testimonial = () => {
                                     />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-gray-900 text-lg">{testimonial.name}</h4>
-                                    <p className="text-sm text-indigo-600">{testimonial.role}</p>
+                                    <h4 className=" text-white text-lg">{testimonial.name}</h4>
+                                    <p className="text-sm text-gray-400">{testimonial.role}</p>
                                 </div>
                             </div>
                             <div className="flex mb-3">
@@ -91,10 +89,10 @@ const Testimonial = () => {
                                     <FaStar key={i} className="text-yellow-400 text-sm" />
                                 ))}
                             </div>
-                            <p className="text-gray-600 mb-4 leading-relaxed">"{testimonial.content}"</p>
+                            <p className="text-gray-400 mb-4 leading-relaxed">"{testimonial.content}"</p>
                             <div className="flex gap-2 mb-3">
-                                <span className="text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">
-                                    <FaCode className="inline mr-1 text-xs" />
+                                <span className="text-xs font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent px-3 py-1 rounded-full">
+                                    <FaCode className=" mr-1 text-xs" />
                                     {testimonial.tech}
                                 </span>
                             </div>
