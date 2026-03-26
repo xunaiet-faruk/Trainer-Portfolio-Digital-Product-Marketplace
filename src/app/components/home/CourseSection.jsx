@@ -8,54 +8,50 @@ import { FaStar, FaUserGraduate, FaClock, FaShoppingCart, FaArrowRight } from 'r
 const courses = [
     {
         id: 1,
-        title: 'Complete Web Development Bootcamp',
-        description: 'Master HTML, CSS, JavaScript, React, Next.js and build real-world projects',
+        title: 'The Complete React.js  Course',
+        description: 'Master React.js with hooks, context API, Redux, and build 10+ real-world projects',
         price: 49.99,
         originalPrice: 199.99,
-        rating: 4.8,
-        students: 3240,
-        duration: '32 hours',
-        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
-        category: 'Development',
+        rating: 4.9,
+        students: 5240,
+        duration: '42 hours',
+        image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&h=300&fit=crop',
         badge: 'Best Seller'
     },
     {
         id: 2,
-        title: 'UI/UX Design Masterclass',
-        description: 'Learn Figma, Adobe XD, user research, prototyping and design systems',
-        price: 39.99,
-        originalPrice: 149.99,
-        rating: 4.9,
-        students: 1850,
-        duration: '24 hours',
-        image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop',
-        category: 'Design',
+        title: 'Next.js 14 - The Complete Guide',
+        description: 'Build full-stack apps with Next.js, server components, API routes, and App Router',
+        price: 59.99,
+        originalPrice: 249.99,
+        rating: 4.8,
+        students: 3850,
+        duration: '35 hours',
+        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop',
         badge: 'Hot & New'
     },
     {
         id: 3,
-        title: 'Video Editing Pro with Premiere Pro',
-        description: 'Professional video editing, color grading, motion graphics and visual effects',
+        title: 'Node.js & Express - Backend Mastery',
+        description: 'Build RESTful APIs, authentication, and deploy scalable Node.js applications',
         price: 44.99,
         originalPrice: 179.99,
         rating: 4.7,
-        students: 1240,
-        duration: '28 hours',
-        image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d7dd?w=500&h=300&fit=crop',
-        category: 'Video',
+        students: 4240,
+        duration: '38 hours',
+        image: 'https://images.unsplash.com/photo-1627398242454-45a1465c2479?w=500&h=300&fit=crop',
         badge: 'Popular'
     },
     {
         id: 4,
-        title: 'Digital Marketing & SEO Mastery',
-        description: 'Social media marketing, Google Ads, SEO strategies and analytics',
-        price: 34.99,
-        originalPrice: 129.99,
-        rating: 4.6,
-        students: 2780,
-        duration: '20 hours',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop',
-        category: 'Marketing',
+        title: 'MERN Stack - Full Stack Development',
+        description: 'Learn MongoDB, Express, React, Node.js and build real-world applications',
+        price: 69.99,
+        originalPrice: 299.99,
+        rating: 4.9,
+        students: 6780,
+        duration: '50 hours',
+        image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop',
         badge: 'Trending'
     }
 ];
@@ -65,7 +61,7 @@ const CoursesSection = () => {
 
     return (
         <div className=" py-20">
-            <div className="container  mx-auto px-4">
+            <div className="container mx-auto px-4">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -77,13 +73,13 @@ const CoursesSection = () => {
                         Top Rated Courses
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-400 mb-4">
-                        Popular{' '}
-                        <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                            Courses
+                        Popular {' '}
+                        <span className="text-indigo-600">
+                            Web Development Courses
                         </span>
                     </h2>
                     <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        Most loved courses by our community
+                        Most loved courses by our community of developers
                     </p>
                 </motion.div>
 
@@ -106,11 +102,8 @@ const CoursesSection = () => {
                                     alt={course.title}
                                     className={`w-full h-full object-cover transition-transform duration-700 ${hoveredCourse === course.id ? 'scale-110' : 'scale-100'}`}
                                 />
-                                <div className="absolute top-4 left-4 bg-yellow-400 text-gray-400 px-2 py-1 rounded-lg text-xs font-bold">
+                                <div className="absolute top-4 left-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-lg text-xs font-bold shadow-lg">
                                     {course.badge}
-                                </div>
-                                <div className="absolute top-4 right-4 bg-indigo-600 text-white px-2 py-1 rounded-lg text-xs font-bold">
-                                    {course.category}
                                 </div>
                             </div>
                             <div className="p-5">
@@ -120,12 +113,12 @@ const CoursesSection = () => {
                                             <FaStar key={i} className={`text-sm ${i < Math.floor(course.rating) ? 'text-yellow-400' : 'text-gray-300'}`} />
                                         ))}
                                     </div>
-                                    <span className="text-xs text-gray-500">({course.rating})</span>
+                                    <span className="text-xs text-gray-400">({course.rating})</span>
                                 </div>
-                                <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-indigo-600 transition-colors">
+                                <h3 className="text-lg  text-white mb-2 line-clamp-2 group-hover:text-indigo-600 transition-colors">
                                     {course.title}
                                 </h3>
-                                <p className="text-sm text-gray-600 mb-3 line-clamp-2">{course.description}</p>
+                                <p className="text-sm text-gray-400 mb-3 line-clamp-2">{course.description}</p>
                                 <div className="flex items-center justify-between mb-3 text-sm text-gray-500">
                                     <div className="flex items-center gap-1">
                                         <FaClock className="text-xs" />
@@ -142,7 +135,7 @@ const CoursesSection = () => {
                                         <span className="text-sm text-gray-400 line-through ml-2">${course.originalPrice}</span>
                                     </div>
                                     <button className="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center hover:bg-indigo-600 group/btn transition-all duration-300">
-                                        <FaShoppingCart className="text-indigo-600 group-hover/btn:text-white transition-colors text-sm" />
+                                        <FaShoppingCart className="text-indigo-600 group-hover/btn:text-white transition-colors hover:text-white text-sm" />
                                     </button>
                                 </div>
                             </div>
@@ -150,10 +143,10 @@ const CoursesSection = () => {
                     ))}
                 </div>
 
-                <div className="text-center mt-12">
+                <div className="text-center mt-20">
                     <Link
                         href="/courses"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
+                        className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-all duration-300 hover:scale-105"
                     >
                         View All Courses
                         <FaArrowRight />
