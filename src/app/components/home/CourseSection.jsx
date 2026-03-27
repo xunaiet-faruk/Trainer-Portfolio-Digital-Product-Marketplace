@@ -129,7 +129,7 @@ const CoursesSection = () => {
                                 </div>
                                 <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                                     <div>
-                                        <span className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">${course.price}</span>
+                                        <span className="text-2xl font-bold text-indigo-600">${course.price}</span>
                                         <span className="text-sm text-gray-400 line-through ml-2">${course.originalPrice}</span>
                                     </div>
                                     <button className="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center hover:bg-indigo-600 group/btn transition-all duration-300">

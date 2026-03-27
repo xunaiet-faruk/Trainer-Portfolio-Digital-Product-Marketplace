@@ -22,9 +22,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body className="bg-black container mx-auto">
         <Navbar/>
-        <main className="min-h-screen">
+        <main className="">
           {children}
         </main>
         <Footer/>
