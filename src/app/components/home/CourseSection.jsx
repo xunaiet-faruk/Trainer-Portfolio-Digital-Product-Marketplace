@@ -8,7 +8,7 @@ import { FaStar, FaUserGraduate, FaClock, FaShoppingCart, FaArrowRight } from 'r
 const courses = [
     {
         id: 1,
-        title: 'The Complete React.js  Course',
+        title: 'The Complete React.js Development Course',
         description: 'Master React.js with hooks, context API, Redux, and build 10+ real-world projects',
         price: 49.99,
         originalPrice: 199.99,

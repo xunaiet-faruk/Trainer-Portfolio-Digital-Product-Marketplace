@@ -1,4 +1,4 @@
-// app/templates/[id]/page.jsx
+
 "use client";
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
@@ -94,7 +94,7 @@ export default function SingleTemplatePage() {
     const [isAddedToCart, setIsAddedToCart] = useState(false);
 
     useEffect(() => {
-        // Get id from URL params
+  
         const id = parseInt(params.id);
         const found = templatesData.find(t => t.id === id);
         setTemplate(found);

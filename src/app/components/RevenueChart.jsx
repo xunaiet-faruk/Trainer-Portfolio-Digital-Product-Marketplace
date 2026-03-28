@@ -15,13 +15,12 @@ import {
 export default function RevenueChart({ data }) {
     const totalRevenue = data.values.reduce((sum, val) => sum + val, 0);
 
-    // Transform data for recharts
     const chartData = data.labels.map((label, index) => ({
         name: label,
         revenue: data.values[index],
     }));
 
-    // Custom Tooltip
+    
     const CustomTooltip = ({ active, payload, label }) => {
         if (active && payload && payload.length) {
             return (

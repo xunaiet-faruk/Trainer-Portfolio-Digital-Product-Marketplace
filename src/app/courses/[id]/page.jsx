@@ -1,4 +1,4 @@
-// app/courses/[id]/page.jsx
+
 "use client";
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
@@ -31,7 +31,7 @@ export default function SingleCoursePage() {
     const [isAddedToCart, setIsAddedToCart] = useState(false);
 
     useEffect(() => {
-        // Get course id from params
+        
         const courseId = parseInt(params.id);
         const foundCourse = coursesData.courses.find(c => c.id === courseId);
         setCourse(foundCourse);
