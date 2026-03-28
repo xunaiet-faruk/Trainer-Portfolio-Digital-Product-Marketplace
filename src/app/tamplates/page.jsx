@@ -211,7 +211,7 @@ export default function TemplatesPage() {
     });
 
     return (
-        <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
+        <div className="">
             {/* Hero Section with Animation */}
             <div className="relative overflow-hidden pt-32 pb-20 lg:pt-30 lg:pb-28">
                
