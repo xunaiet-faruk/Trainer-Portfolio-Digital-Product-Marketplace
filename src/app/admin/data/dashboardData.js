@@ -1,4 +1,3 @@
-// app/admin/data/dashboardData.js
 export const dashboardStats = [
     {
         id: 1,
@@ -44,28 +43,7 @@ export const dashboardStats = [
         bgColor: 'bg-orange-50',
         textColor: 'text-orange-600'
     },
-    {
-        id: 5,
-        title: 'Downloads',
-        value: '89,234',
-        change: '+34%',
-        changeType: 'increase',
-        icon: 'FiDownload',
-        color: 'from-red-500 to-red-600',
-        bgColor: 'bg-red-50',
-        textColor: 'text-red-600'
-    },
-    {
-        id: 6,
-        title: 'Active Users',
-        value: '8,234',
-        change: '-2%',
-        changeType: 'decrease',
-        icon: 'FiActivity',
-        color: 'from-yellow-500 to-yellow-600',
-        bgColor: 'bg-yellow-50',
-        textColor: 'text-yellow-600'
-    }
+   
 ];
 
 export const recentOrders = [

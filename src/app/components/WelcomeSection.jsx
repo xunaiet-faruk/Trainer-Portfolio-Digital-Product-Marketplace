@@ -21,7 +21,7 @@ export default function WelcomeSection() {
             <div className="flex justify-between items-start">
                 <div>
                     <h1 className="text-2xl md:text-3xl font-bold mb-2 text-white">
-                        Welcome back, Admin! 👋
+                        Welcome back, <span className='bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent'>Admin! </span>
                     </h1>
                     <p className="text-gray-400 mb-4">
                         Here's what's happening with your marketplace today.

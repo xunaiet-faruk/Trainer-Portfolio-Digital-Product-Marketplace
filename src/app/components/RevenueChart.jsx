@@ -1,11 +1,40 @@
-
 "use client";
 import { motion } from 'framer-motion';
-import { FiTrendingUp, FiDollarSign, FiCalendar } from 'react-icons/fi';
+import { FiTrendingUp, FiDollarSign } from 'react-icons/fi';
+import {
+    AreaChart,
+    Area,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    ResponsiveContainer,
+    Legend
+} from 'recharts';
 
 export default function RevenueChart({ data }) {
-    const maxValue = Math.max(...data.values);
     const totalRevenue = data.values.reduce((sum, val) => sum + val, 0);
+
+    // Transform data for recharts
+    const chartData = data.labels.map((label, index) => ({
+        name: label,
+        revenue: data.values[index],
+    }));
+
+    // Custom Tooltip
+    const CustomTooltip = ({ active, payload, label }) => {
+        if (active && payload && payload.length) {
+            return (
+                <div className="bg-gray-800 border border-gray-700 rounded-lg p-3 shadow-xl">
+                    <p className="text-gray-400 text-xs mb-1">{label}</p>
+                    <p className="text-white font-semibold text-lg">
+                        ${payload[0].value.toLocaleString()}
+                    </p>
+                </div>
+            );
+        }
+        return null;
+    };
 
     return (
         <motion.div
@@ -37,26 +66,50 @@ export default function RevenueChart({ data }) {
                     </div>
                 </div>
 
-                {/* Bar Chart */}
-                <div className="flex items-end gap-4 h-80">
-                    {data.values.map((value, idx) => (
-                        <div key={idx} className="flex-1 flex flex-col items-center gap-3">
-                            <motion.div
-                                initial={{ height: 0 }}
-                                animate={{ height: `${(value / maxValue) * 240}px` }}
-                                transition={{ duration: 0.8, delay: idx * 0.1 }}
-                                className="w-full bg-gradient-to-t from-indigo-500 to-purple-500 rounded-xl relative group cursor-pointer"
-                            >
-                                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
-                                    ${value.toLocaleString()}
-                                </div>
-                            </motion.div>
-                            <div className="flex items-center gap-1">
-                                <FiCalendar className="w-3 h-3 text-gray-500" />
-                                <span className="text-xs text-gray-400 font-medium">{data.labels[idx]}</span>
-                            </div>
-                        </div>
-                    ))}
+                {/* Recharts Area Chart */}
+                <div className="h-80 w-full">
+                    <ResponsiveContainer width="100%" height="100%">
+                        <AreaChart data={chartData} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
+                            <defs>
+                                <linearGradient id="colorRevenue" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="5%" stopColor="#6366F1" stopOpacity={0.3} />
+                                    <stop offset="95%" stopColor="#6366F1" stopOpacity={0} />
+                                </linearGradient>
+                            </defs>
+                            <CartesianGrid
+                                strokeDasharray="3 3"
+                                stroke="#374151"
+                                vertical={false}
+                            />
+                            <XAxis
+                                dataKey="name"
+                                stroke="#9CA3AF"
+                                fontSize={12}
+                                tickLine={false}
+                                axisLine={false}
+                                dy={10}
+                            />
+                            <YAxis
+                                stroke="#9CA3AF"
+                                fontSize={12}
+                                tickLine={false}
+                                axisLine={false}
+                                tickFormatter={(value) => `$${value.toLocaleString()}`}
+                                dx={-10}
+                            />
+                            <Tooltip content={<CustomTooltip />} />
+                            <Area
+                                type="monotone"
+                                dataKey="revenue"
+                                stroke="#6366F1"
+                                strokeWidth={2}
+                                fill="url(#colorRevenue)"
+                                fillOpacity={1}
+                                animationDuration={1500}
+                                animationBegin={0}
+                            />
+                        </AreaChart>
+                    </ResponsiveContainer>
                 </div>
             </div>
         </motion.div>

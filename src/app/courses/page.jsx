@@ -35,17 +35,17 @@ const Page = () => {
 
 
     return (
-        <div className=" bg-black">
-            
+        <div className="bg-black">
+           
+            <div className="h-20 md:h-24 lg:h-28"></div>
+
             <div className="relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
-               
                 <div className="absolute inset-0 opacity-30">
                     <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-600 rounded-full filter blur-3xl"></div>
                     <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-600 rounded-full filter blur-3xl"></div>
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-pink-600 rounded-full filter blur-3xl opacity-20"></div>
                 </div>
 
-      
                 <motion.div
                     className="absolute top-0 -left-40 w-80 h-80 bg-indigo-600 rounded-full filter blur-3xl opacity-20"
                     animate={{
@@ -71,8 +71,8 @@ const Page = () => {
                     }}
                 />
 
-                <div className="relative container mx-auto px-4 py-28 md:py-40 ">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center ">
+                <div className="relative container mx-auto px-4 py-28 md:py-40">
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
@@ -114,7 +114,7 @@ const Page = () => {
 
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <motion.button
-                                    className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-indigo-600/25 transition-all duration-300 flex items-center justify-center gap-2"
+                                    className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-2xl hover:shadow-indigo-600/25 transition-all duration-300 flex items-center justify-center gap-2"
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
                                 >
@@ -194,7 +194,7 @@ const Page = () => {
                                     </div>
                                     <div className="mt-6 pt-6 border-t border-gray-800">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center">
+                                            <div className="w-12 h-12 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-full flex items-center justify-center">
                                                 <span className="text-white font-bold">⭐</span>
                                             </div>
                                             <div>
@@ -210,7 +210,7 @@ const Page = () => {
                 </div>
             </div>
 
-         
+            {/* Featured Courses Section */}
             <div className="container mx-auto px-4 py-20">
                 <motion.div
                     className="text-center mb-12"
@@ -286,7 +286,7 @@ const Page = () => {
                                     </div>
                                     <motion.button
                                         onClick={() => router.push(`/courses/${course.id}`)}
-                                        className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-1 px-2 "
+                                        className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-1 px-2 rounded-lg"
                                         whileHover={{ scale: 1.1 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -296,16 +296,6 @@ const Page = () => {
                             </div>
                         </motion.div>
                     ))}
-                </motion.div>
-
-                {/* View All Button */}
-                <motion.div
-                    className="text-center mt-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                >
-                    
                 </motion.div>
             </div>
         </div>

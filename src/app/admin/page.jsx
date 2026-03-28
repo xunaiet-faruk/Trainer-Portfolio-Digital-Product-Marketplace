@@ -1,8 +1,6 @@
-// app/admin/page.jsx
 "use client";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-
 
 import WelcomeSection from '../components/WelcomeSection';
 import StatsCards from '../components/StatsCards';
@@ -21,7 +19,7 @@ export default function AdminDashboard() {
 
     if (loading) {
         return (
-            <div className=" flex items-center justify-center">
+            <div className="flex items-center justify-center min-h-screen">
                 <div className="text-center">
                     <div className="w-16 h-16 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                     <p className="text-gray-400">Loading dashboard...</p>

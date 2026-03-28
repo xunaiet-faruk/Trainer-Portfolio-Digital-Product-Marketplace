@@ -213,7 +213,7 @@ export default function TemplatesPage() {
     return (
         <div className="bg-gradient-to-b from-gray-50 to-white min-h-screen">
             {/* Hero Section with Animation */}
-            <div className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-28">
+            <div className="relative overflow-hidden pt-32 pb-20 lg:pt-30 lg:pb-28">
                
 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,7 +243,7 @@ export default function TemplatesPage() {
                             className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
                         >
                             Professional Templates
-                            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent block mt-2">
+                            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent block mt-2">
                                 for Modern Creators
                             </span>
                         </motion.h1>
