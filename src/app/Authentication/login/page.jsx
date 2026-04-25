@@ -2,15 +2,34 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaLock, FaSignInAlt } from 'react-icons/fa';
+import { useAuth } from '@/app/context/AuthProvider';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const { login } = useAuth();
+    const router = useRouter();
 
-    const handleSubmit = (e) => {
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle login logic here
-        console.log({ email, password });
+        setError('');
+        setLoading(true);
+
+        try {
+            const result = await login(email, password);
+            console.log("User logged in:", result.user);
+            router.push('/');
+        } catch (err) {
+            console.error("Login error:", err);
+            setError(getErrorMessage(err.code));
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -78,6 +97,17 @@ const Login = () => {
                         <FaSignInAlt />
                         Sign In
                     </motion.button>
+                    <div className="mt-6 text-center">
+                        <p className="text-gray-400">
+                            Already have an account?{' '}
+                            <Link
+                                href="/Authentication/register"
+                                className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors"
+                            >
+                                Sign Up
+                            </Link>
+                        </p>
+                    </div>
                 </form>
             </motion.div>
         </div>
