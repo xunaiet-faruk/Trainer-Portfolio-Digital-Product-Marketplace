@@ -48,7 +48,7 @@ const Navbar = () => {
 
     const handleAddcontent = () => {
         setIsDropdownOpen(false);
-        router.push('/addproduct');
+        router.push('/addcourses');
     };
 
     return (
@@ -154,7 +154,7 @@ const Navbar = () => {
                                                         className="w-full cursor-pointer flex items-center gap-3 px-4 py-2 text-gray-300 hover:text-white hover:bg-indigo-600/20 transition-colors duration-200"
                                                 >
                                                     <FaTachometerAlt className="text-indigo-400 text-sm" />
-                                                    <span>Add Content</span>
+                                                    <span>Add Courses</span>
                                                 </button>
 
                                                 {/* Logout Button */}
