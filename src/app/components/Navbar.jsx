@@ -43,8 +43,8 @@ const Navbar = () => {
                                 key={item.path}
                                 href={item.path}
                                 className={`relative px-4 py-2 transition-all duration-300 group ${isActive(item.path)
-                                        ? 'text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text font-semibold text-white'
-                                        : 'text-gray-400 hover:text-white'
+                                    ? 'text-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text font-semibold text-white'
+                                    : 'text-gray-400 hover:text-white'
                                     }`}
                             >
                                 <span className="relative z-10">{item.name}</span>
@@ -71,7 +71,7 @@ const Navbar = () => {
                         transition={{ duration: 0.5 }}
                     >
                         <Link
-                            href="/"
+                            href="/Authentication/login"
                             className="px-5 py-2 text-xl rounded-lg font-medium transition-all duration-300 border border-transparent bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent hover:border-indigo-500/50"
                         >
                             Login
