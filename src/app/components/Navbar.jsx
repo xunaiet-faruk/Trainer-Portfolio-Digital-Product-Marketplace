@@ -46,9 +46,9 @@ const Navbar = () => {
         }
     };
 
-    const handleDashboard = () => {
+    const handleAddcontent = () => {
         setIsDropdownOpen(false);
-        router.push('/dashboard');
+        router.push('/addproduct');
     };
 
     return (
@@ -150,11 +150,11 @@ const Navbar = () => {
 
                                                 {/* Dashboard Link */}
                                                 <button
-                                                    onClick={handleDashboard}
+                                                    onClick={handleAddcontent}
                                                         className="w-full cursor-pointer flex items-center gap-3 px-4 py-2 text-gray-300 hover:text-white hover:bg-indigo-600/20 transition-colors duration-200"
                                                 >
                                                     <FaTachometerAlt className="text-indigo-400 text-sm" />
-                                                    <span>Dashboard</span>
+                                                    <span>Add Content</span>
                                                 </button>
 
                                                 {/* Logout Button */}
